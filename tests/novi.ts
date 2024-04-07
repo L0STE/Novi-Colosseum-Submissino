@@ -3,6 +3,9 @@ import { Program } from "@coral-xyz/anchor";
 import { Novi } from "../target/types/novi";
 
 describe("novi", () => {
+  const wallet = anchor.Wallet.local();
+  const provider = anchor.getProvider();
+  const connection = provider.connection;
   // Configure the client to use the local cluster.
   anchor.setProvider(anchor.AnchorProvider.env());
 
